@@ -26,11 +26,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         } else {
             tap_code(KC_VOLD);
         }
-    } else if (index == 1) {
+    } else if(index == 1)  {
         if (clockwise) {
-            tap_code(KC_PGDOWN);
+            rgblight_increase_val();
         } else {
-            tap_code(KC_PGUP);
+            rgblight_decrease_val();
         }
     }
 }
